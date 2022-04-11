@@ -5,7 +5,7 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.from = function(obj) {
+Point.from = function(obj) {    //because Function === Object, we can add a property to the function
   const { x, y } = obj;
   return new Point(x, y);
 };
@@ -20,7 +20,7 @@ Point.prototype.toString = function() {
 };
 
 console.log('function prototype:', (function() {}).prototype);
-console.log('lambda prototype:', (() => {}).prototype);
+console.log('lambda prototype:', (() => {}).prototype);  //arrow function doesn't have prototype
 
 console.log('Point prototype:', Point.prototype);
 console.log('move prototype:', Point.prototype.move.prototype);
@@ -31,3 +31,4 @@ p1.move(-5, 10);
 console.log(p1);
 console.log(p1.toString());
 console.log(p1 + '');
+console.log(Point.from({x: 1, y: 1}));

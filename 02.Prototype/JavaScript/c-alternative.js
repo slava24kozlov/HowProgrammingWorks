@@ -1,6 +1,6 @@
 'use strict';
 
-function Rect(x, y, width, height) {
+function Rect(x, y, width, height) {  //new вызывает конструктор у function и class
   this.x = x;
   this.y = y;
   this.width = width;
@@ -10,7 +10,7 @@ function Rect(x, y, width, height) {
   };
 }
 
-const p1 = new Rect(10, 20, 50, 50);
+const p1 = new Rect(10, 20, 50, 50); //создался объект c помощью конструктора Rect у которого prototype Rect
 
 console.log(p1);
 console.log(p1.toString());

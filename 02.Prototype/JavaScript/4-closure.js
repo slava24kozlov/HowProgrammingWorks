@@ -1,6 +1,6 @@
 'use strict';
 
-const point = (x, y) => {
+const point = (x, y) => {  //создание экземпляра через замыкание
   const p = {};
 
   p.move = (dx, dy) => {

@@ -15,7 +15,7 @@ function Square(x, y, side) {
   Rect.call(this, x, y, side, side);
 }
 
-Object.setPrototypeOf(Square.prototype, Rect.prototype);
+Object.setPrototypeOf(Square.prototype, Rect.prototype); //после этого Square будет иметь доступ к измененному методу toString (т.к. Square унаследовал прототаип Rect)
 
 // const util = require('util');
 // util.inherits(Square, Rect); // for Node.js
@@ -30,4 +30,4 @@ const p1 = new Square(10, 20, 50);
 
 console.log(p1);
 console.log(p1.toString());
-console.log(`${p1}`);
+console.log(`${p1}`);  //под капотом работает метод toString
